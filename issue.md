@@ -8,25 +8,25 @@ Buat REST API backend project dari scratch menggunakan **Bun** sebagai runtime, 
 
 ## Phase 1: Project Initialization
 
-- [ ] Inisialisasi project baru dengan `bun init`
-- [ ] Install dependencies utama:
+- [x] Inisialisasi project baru dengan `bun init`
+- [x] Install dependencies utama:
   - `elysia` dan `@elysiajs/swagger` (dokumentasi API otomatis)
   - `drizzle-orm` dan `drizzle-kit` (ORM + migration tool)
   - `mysql2` (MySQL driver untuk Drizzle)
-- [ ] Setup TypeScript config (`tsconfig.json`) yang compatible dengan Bun
-- [ ] Buat file `.env` dan `.env.example` untuk konfigurasi database (host, port, user, password, database name)
-- [ ] Tambahkan `.gitignore` (node_modules, .env, dist, dll)
+- [x] Setup TypeScript config (`tsconfig.json`) yang compatible dengan Bun
+- [x] Buat file `.env` dan `.env.example` untuk konfigurasi database (host, port, user, password, database name)
+- [x] Tambahkan `.gitignore` (node_modules, .env, dist, dll)
 
 ---
 
 ## Phase 2: Database Setup (Drizzle + MySQL)
 
-- [ ] Buat folder `src/db/`
-- [ ] Setup Drizzle connection di `src/db/index.ts` — baca config dari `.env`
-- [ ] Buat file `drizzle.config.ts` di root untuk konfigurasi migration
-- [ ] Buat contoh schema awal di `src/db/schema/` (minimal 1 tabel, misalnya `users`)
-- [ ] Pastikan `drizzle-kit generate` dan `drizzle-kit migrate` berjalan dengan benar
-- [ ] Tambahkan npm scripts di `package.json`:
+- [x] Buat folder `src/db/`
+- [x] Setup Drizzle connection di `src/db/index.ts` — baca config dari `.env`
+- [x] Buat file `drizzle.config.ts` di root untuk konfigurasi migration
+- [x] Buat contoh schema awal di `src/db/schema/` (minimal 1 tabel, misalnya `users`)
+- [x] Pastikan `drizzle-kit generate` dan `drizzle-kit migrate` berjalan dengan benar
+- [x] Tambahkan npm scripts di `package.json`:
   - `db:generate` → generate migration files
   - `db:migrate` → jalankan migration
   - `db:studio` → buka Drizzle Studio
@@ -35,8 +35,8 @@ Buat REST API backend project dari scratch menggunakan **Bun** sebagai runtime, 
 
 ## Phase 3: Struktur Aplikasi ElysiaJS
 
-- [ ] Buat entry point di `src/index.ts` — setup Elysia app, register plugins, listen di port dari `.env`
-- [ ] Buat folder structure:
+- [x] Buat entry point di `src/index.ts` — setup Elysia app, register plugins, listen di port dari `.env`
+- [x] Buat folder structure:
   ```
   src/
   ├── index.ts          # Entry point
@@ -47,23 +47,23 @@ Buat REST API backend project dari scratch menggunakan **Bun** sebagai runtime, 
   ├── services/         # Business logic layer
   └── types/            # Shared TypeScript types
   ```
-- [ ] Buat minimal 1 CRUD route sebagai contoh (misalnya `/api/users`) dengan:
+- [x] Buat minimal 1 CRUD route sebagai contoh (misalnya `/api/users`) dengan:
   - `GET /` — list all
   - `GET /:id` — get by id
   - `POST /` — create
   - `PUT /:id` — update
   - `DELETE /:id` — delete
-- [ ] Integrate Swagger plugin di `/swagger` untuk API docs
+- [x] Integrate Swagger plugin di `/swagger` untuk API docs
 
 ---
 
 ## Phase 4: Developer Experience
 
-- [ ] Tambahkan script `dev` di `package.json` menggunakan `bun --watch` untuk hot reload
-- [ ] Tambahkan script `start` untuk production
-- [ ] Setup error handling global di Elysia (`.onError()`)
-- [ ] Tambahkan basic request validation menggunakan Elysia's built-in schema validation (`t.Object`, `t.String`, dll)
-- [ ] Buat `README.md` dengan instruksi:
+- [x] Tambahkan script `dev` di `package.json` menggunakan `bun --watch` untuk hot reload
+- [x] Tambahkan script `start` untuk production
+- [x] Setup error handling global di Elysia (`.onError()`)
+- [x] Tambahkan basic request validation menggunakan Elysia's built-in schema validation (`t.Object`, `t.String`, dll)
+- [x] Buat `README.md` dengan instruksi:
   - Prerequisites (Bun, MySQL)
   - Cara install & setup
   - Cara menjalankan project
